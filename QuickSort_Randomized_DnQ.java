@@ -60,8 +60,9 @@ public class QuickSort_Randomized_DnQ {
 	//partition and return the pivot
 	public static int PartitionArray(int []A, int l,int r) {
 		//get the random pivot between l and r, pick between 25 to 75 % of n
-		int p=(r-l)/4;
-		int randNum=l+(int) (Math.random()*((r-p)-(l+p)));
+		//int p=(r-l)/4;  
+		int randNum=l+(int) (Math.random()*(r-p));
+		//int randNum=l+(int) (Math.random()*((r-p)-(l+p)));  
 		int tempVar=A[randNum];
 		A[randNum]=A[l];
 		A[l]=tempVar;
